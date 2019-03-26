@@ -13,34 +13,53 @@
 
 <body>
     <div class="box box-ac">
-        <input type="text" placeholder="请输入编号来查询，如：1.1 或者1.10" class="cs-input box-f1">
+        <input type="text" placeholder="请输入要查询的编号/姓名" class="cs-input box-f1">
         <a class="cs-btn">查询</a>
     </div>
     <div class="card">
-        
         <div class="tips">
             <img src="images/tx/def.png" alt="">
-            <label>不要挑战老师的耐心<br/>请输入正确的编号!</label>
-            
+            <label>不要挑战老师的耐心<br/>请输入正确的编号或姓名!</label>
         </div>
         <div class="info">
             <img src="images/tx/崎玉老师.jpg" alt="" id="tx">
-            <div class="box box-ac box-jsb">
-                <div class="title box-f1">编号</div>
-                <div class="box-f1 value" id="number">0.0</div>
+            <div class="info-list">
+                <div class="name" id="name">崎玉老师</div>
+                <div class="number" id="number">0.0</div>
             </div>
-            <div class="box box-ac box-jsb">
-                <div class="title box-f1">姓名</div>
-                <div class="box-f1 value" id="name">崎玉老师</div>
+            
+            <div class="info-list">
+                <div class="title scores">阶段1</div>
+                <div class="box box-ac scores box-jsa" >
+                    <div class="box-f1"><span>作业 </span><b id="score1">100%</b></div>
+                    <div class="box-f1"><span>最终 </span><b id="score1end">100%</b></div>
+                    <div class="box-f1"><span>考试 </span><b id="score1Exam">100%</b></div>
+                </div>
             </div>
-            <div class="box box-ac box-jsb">
-                <div class="title box-f1">阶段1成绩</div>
-                <div class="box-f1 value" id="score1">100</div>
-            </div>
-            <div class="box box-ac box-jsb">
-                <div class="title box-f1">阶段1考试成绩</div>
-                <div class="box-f1 value" id="score1Exam">100</div>
-            </div>
+            <!-- <div class="info-list">
+                    <div class="title scores">阶段2</div>
+                    <div class="box box-ac scores box-jsa" >
+                        <div class="box-f1"><span>作业 </span><b id="score2">未开始</b></div>
+                        <div class="box-f1"><span>最终 </span><b id="score2end">未开始</b></div>
+                        <div class="box-f1"><span>考试 </span><b id="score2Exam">未开始</b></div>
+                    </div>
+                </div>
+                <div class="info-list">
+                        <div class="title scores">阶段3</div>
+                        <div class="box box-ac scores box-jsa" >
+                            <div class="box-f1"><span>作业 </span><b id="score3">未开始</b></div>
+                            <div class="box-f1"><span>最终 </span><b id="score3end">未开始</b></div>
+                            <div class="box-f1"><span>考试 </span><b id="score3Exam">未开始</b></div>
+                        </div>
+                    </div>
+                    <div class="info-list">
+                            <div class="title scores">期末综合</div>
+                            <div class="box box-ac scores box-jsa" >
+                                <div class="box-f1"><span>作业 </span><b id="score4">未开始</b></div>
+                                <div class="box-f1"><span>最终 </span><b id="score4end">未开始</b></div>
+                                <div class="box-f1"><span>考试 </span><b id="score4Exam">未开始</b></div>
+                            </div>
+                        </div> -->
         </div>
     </div>
 
