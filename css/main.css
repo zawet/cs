@@ -1,0 +1,66 @@
+body {
+    padding: 20px;
+    margin: 0;
+    background: #f2f3f4;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+}
+
+/*盒子模型*/
+.box {
+    display: -webkit-flex !important;
+    display: flex !important;
+    position: relative;
+}
+
+/*横排*/
+.box-col {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.box-ac {
+    -webkit-align-items: center;
+    align-items: center;
+}
+.box-jsb {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.box-f1 {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+
+
+.card {background: #fff;padding: 10px; border-radius: 10px;box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); display: none;}
+.card .box{ border-bottom: 1px dashed #eee;padding: 10px 5px; }
+.card .title{ color: #888;font-size: 14px;}
+.card .value{ text-align: right; font-size: 16px; color: #111;}
+
+.cs-input {
+    width: 100%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    background: #fff;
+    border-radius: 30px;
+    line-height: 30px;
+    padding: 10px 15px;
+    border: none;
+    color: #555;
+    font-size: 14px;
+    display: block;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+.cs-btn {
+    background: rgb(61, 118, 243);
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    border-radius: 30px;
+    line-height: 30px;
+    padding: 5px 0;
+    text-align: center;
+}
