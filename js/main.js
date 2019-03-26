@@ -27,7 +27,7 @@ var data=[
     {number:"1.26",name:"伍志坚",score1:"82",score1Exam:"100"},
     {number:"2.1",name:"李康辉",score1:"80",score1Exam:"100"},
     {number:"2.2",name:"徐胜军",score1:"86",score1Exam:"60"},
-    {number:"2.3",name:"李国龙",score1:"0",score1Exam:"60"},
+    {number:"2.3",name:"李国龙",score1:"0",score1Exam:"100"},
     {number:"2.4",name:"卢志杰",score1:"70",score1Exam:"85"},
     {number:"2.5",name:"温鸿林",score1:"40",score1Exam:"85"},
     {number:"2.6",name:"周伊远",score1:"0",score1Exam:"100"},
@@ -63,14 +63,6 @@ $(function(){
             var nums=[];
             data.map(item=>{
                 nums.push(item.number);
-                // if(item.number==num){
-                //     for(var key in item){
-                //         $("#"+key).html(item[key])
-                //     }
-                //     $(".card").show();
-                // }else{
-                //     alert("编码错误或者编码没信息") 
-                // }
             })
             var isindex=nums.indexOf(num)
             if(isindex!=-1){
