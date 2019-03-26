@@ -32,11 +32,17 @@ body {
 
 
 
-.card {background: #fff;padding: 10px; border-radius: 10px;box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); display: none;}
+.card {background: #fff;padding: 10px 10px 5px; border-radius: 10px;box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);  }
+.card img{ width: 100%;}
 .card .box{ border-bottom: 1px dashed #eee;padding: 10px 5px; }
+.card .box:nth-last-child(1){border-bottom: none;}
 .card .title{ color: #888;font-size: 14px;}
 .card .value{ text-align: right; font-size: 16px; color: #111;}
-
+.card .value font{ color: rgb(245, 27, 27); font-weight: bold;}
+.card .value b{ color:rgb(23, 124, 240) ;}
+.card .value span{ color: rgb(15, 192, 44);font-weight: bold;}
+.tips{ width: 100%;  text-align: center; display: none;}
+.tips label{ padding: 20px 0;font-size: 20px; font-weight: bold; color: #111; display: block;}
 .cs-input {
     width: 100%;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
@@ -44,17 +50,18 @@ body {
     background: #fff;
     border-radius: 30px;
     line-height: 30px;
-    padding: 10px 15px;
+    padding: 5px 15px;
     border: none;
     color: #555;
     font-size: 14px;
     display: block;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     box-sizing: border-box;
 }
 
 .cs-btn {
-    background: rgb(61, 118, 243);
+    cursor: pointer;
+    background: rgb(79, 80, 90);
     font-size: 16px;
     font-weight: bold;
     color: #fff;
@@ -62,5 +69,8 @@ body {
     border-radius: 30px;
     line-height: 30px;
     padding: 5px 0;
+    width: 30%;
     text-align: center;
+     margin-left: 10px;
+     margin-bottom: 20px;
 }
