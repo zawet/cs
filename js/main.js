@@ -1,4 +1,5 @@
 var data=[
+    {number:"0.0",name:"崎玉老师",score1:"100",score1Exam:"100"},
     {number:"1.1",name:"何嘉亮",score1:"0",score1Exam:"10"},
     {number:"1.2",name:"伍德怀",score1:"30",score1Exam:"30"},
     {number:"1.3",name:"李培凯",score1:"0",score1Exam:"100"},
@@ -66,14 +67,26 @@ $(function(){
             })
             var isindex=nums.indexOf(num)
             if(isindex!=-1){
+                $(".tips").hide();
+                $(".info").show();
                 for(var key in data[isindex]){
-                    console.log(key);
-                    
-                    $("#"+key).html(data[isindex][key])
+                    var texts=data[isindex][key];
+                    if(key=="score1"||key=="score1Exam"){
+                        if(Number(data[isindex][key])<60){
+                            texts='<font>'+data[isindex][key]+'%</font>';
+                        }else if(Number(data[isindex][key])>=90){
+                            texts='<b>'+data[isindex][key]+'%</b>';
+                        }else{
+                            texts='<span>'+data[isindex][key]+'%</span>';
+                        }
+                    }
+                    $("#"+key).html(texts)
                 }
-                $(".card").show();
+                $("#tx").attr("src","images/tx/"+data[isindex].name+".jpg")
+                
             }else{
-                alert("编码错误或者编码没信息")
+                $(".tips").show();
+                $(".info").hide();
             }
             
         }
