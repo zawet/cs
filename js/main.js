@@ -17,7 +17,7 @@ var data=[
     {number:"1.15",name:"杨榕亮",score1:"82",score1Exam:"100"},
     {number:"1.16",name:"苏才隆",score1:"70",score1Exam:"100"},
     {number:"1.17",name:"徐运英",score1:"84",score1Exam:"85"},
-    {number:"1.18",name:"苏曼",score1:"88",score1Exam:"60"},
+    {number:"1.18",name:"苏漫",score1:"88",score1Exam:"60"},
     {number:"1.19",name:"李坤达",score1:"10",score1Exam:"10"},
     {number:"1.20",name:"陈恒彪",score1:"99",score1Exam:"100"},
     {number:"1.21",name:"徐万强",score1:"0",score1Exam:"0"},
@@ -39,7 +39,7 @@ var data=[
     {number:"2.11",name:"柯凯豪",score1:"80",score1Exam:"80"},
     {number:"2.12",name:"杨梓发",score1:"90",score1Exam:"100"},
     {number:"2.13",name:"李明秋",score1:"75",score1Exam:"100"},
-    {number:"2.14",name:"李骏鹏",score1:"70",score1Exam:"100"},
+    {number:"2.14",name:"李俊鹏",score1:"70",score1Exam:"100"},
     {number:"2.15",name:"戴麟子",score1:"89",score1Exam:"100"},
     {number:"2.16",name:"吴晏莉",score1:"86",score1Exam:"0"},
     {number:"2.17",name:"容树明",score1:"60",score1Exam:"95"},
@@ -56,33 +56,37 @@ var data=[
 $(function(){
     $(".cs-btn").click(function(){
         var num=$(".cs-input").val();
-        console.log(num);
-        
         if(num==""){
             alert("请填写课程编号进行查询")
         }else{
             var nums=[];
+            var names=[];
             data.map(item=>{
                 nums.push(item.number);
+                names.push(item.name);
             })
             var isindex=nums.indexOf(num)
-            if(isindex!=-1){
+            var isnamein=names.indexOf(num)
+            if(isindex!=-1 || isnamein!=-1){
                 $(".tips").hide();
                 $(".info").show();
-                for(var key in data[isindex]){
-                    var texts=data[isindex][key];
+                var ins=isindex!=-1?isindex:isnamein!=-1?isnamein:-1;
+                for(var key in data[ins]){
+                    var texts=data[ins][key];
                     if(key=="score1"||key=="score1Exam"){
-                        if(Number(data[isindex][key])<60){
-                            texts='<font>'+data[isindex][key]+'%</font>';
-                        }else if(Number(data[isindex][key])>=90){
-                            texts='<b>'+data[isindex][key]+'%</b>';
-                        }else{
-                            texts='<span>'+data[isindex][key]+'%</span>';
-                        }
+                        texts=data[ins][key]+'%'
+                        // if(Number(data[ins][key])<60){
+                        //     texts='<font>'+data[ins][key]+'%</font>';
+                        // }else if(Number(data[ins][key])>=90){
+                        //     texts='<b>'+data[ins][key]+'%</b>';
+                        // }else{
+                        //     texts='<span>'+data[ins][key]+'%</span>';
+                        // }
                     }
                     $("#"+key).html(texts)
                 }
-                $("#tx").attr("src","images/tx/"+data[isindex].name+".jpg")
+                $("#tx").attr("src","images/tx/"+data[ins].name+".jpg")
+                $("#score1end").html( Number(data[ins]["score1"]) >= Number(data[ins]["score1Exam"])?data[ins]["score1"]+'%':data[ins]["score1Exam"]+'%')
                 
             }else{
                 $(".tips").show();

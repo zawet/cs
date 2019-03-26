@@ -25,6 +25,7 @@ body {
     -webkit-justify-content: space-between;
     justify-content: space-between;
 }
+.box-jsa{-webkit-justify-content:space-around;justify-content:space-around;}/*左右居中对齐*/
 .box-f1 {
     -webkit-flex: 1;
     flex: 1;
@@ -34,13 +35,16 @@ body {
 
 .card {background: #fff;padding: 10px 10px 5px; border-radius: 10px;box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);  }
 .card img{ width: 100%;}
-.card .box{ border-bottom: 1px dashed #eee;padding: 10px 5px; }
-.card .box:nth-last-child(1){border-bottom: none;}
+.card .info-list{ border-bottom: 1px dashed #eee;padding: 10px 5px; }
+.card .info-list:nth-last-child(1){border-bottom: none;}
 .card .title{ color: #888;font-size: 14px;}
-.card .value{ text-align: right; font-size: 16px; color: #111;}
-.card .value font{ color: rgb(245, 27, 27); font-weight: bold;}
-.card .value b{ color:rgb(23, 124, 240) ;}
-.card .value span{ color: rgb(15, 192, 44);font-weight: bold;}
+.card .number{font-size: 14px; color: #888; text-align: center;  padding-bottom: 10px;}
+.card .name{ font-size: 22px; font-weight: bold;text-align: center; margin-bottom: 5px;padding-top: 10px;}
+.card .value{ text-align: right; }
+.card .scores{ text-align: center; padding: 10px 0; color: #555; font-size: 14px;}
+.card .scores span{font-size: 13px; color: #888; display: block; padding-bottom: 5px;}
+.card .scores b{font-size: 16px; color: #333; font-weight: normal;display: block}
+.card .scores #score1end{ font-weight: bold; color: #111; font-size: 18px;}
 .tips{ width: 100%;  text-align: center; display: none;}
 .tips label{ padding: 20px 0;font-size: 20px; font-weight: bold; color: #111; display: block;}
 .cs-input {
