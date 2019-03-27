@@ -42,7 +42,7 @@ var data=[
     {number:"2.14",name:"李俊鹏",score1:"70",score1Exam:"100",score2:"未开始",score2Exam:"未开始"},
     {number:"2.15",name:"戴麟子",score1:"89",score1Exam:"100",score2:"未开始",score2Exam:"未开始"},
     {number:"2.16",name:"吴晏莉",score1:"100",score1Exam:"0",score2:"14%",score2Exam:"未开始"},
-    {number:"2.17",name:"容树明",score1:"60",score1Exam:"95",score2:"30%",score2Exam:"未开始"},
+    {number:"2.17",name:"容树明",score1:"60",score1Exam:"100",score2:"25%",score2Exam:"未开始"},
     {number:"2.18",name:"郑佳祥",score1:"88",score1Exam:"100",score2:"30%",score2Exam:"未开始"},
     {number:"2.19",name:"黄海林",score1:"88",score1Exam:"80",score2:"未开始",score2Exam:"未开始"},
     {number:"2.20",name:"李乾斌",score1:"0",score1Exam:"100",score2:"30%",score2Exam:"未开始"},
